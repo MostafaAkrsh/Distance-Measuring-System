@@ -1,0 +1,28 @@
+#include "lcd.h"
+#include "ultrasonic.h"
+#include "avr/io.h"
+#include "util/delay.h"
+
+volatile uint8 ultraSonic_Flag = 0;
+
+int main(){
+
+	SREG |= (1<<7);
+	LCD_init();
+	Ultrasonic_init();
+
+	uint16 distance;
+
+	while(1){
+
+	Ultrasonic_trigger();
+
+	while (ultraSonic_Flag == 0);
+
+	distance = Ultrasonic_readDistance();
+	LCD_moveCursor(0,0);
+	LCD_intgerToString(distance);
+
+	}
+
+}

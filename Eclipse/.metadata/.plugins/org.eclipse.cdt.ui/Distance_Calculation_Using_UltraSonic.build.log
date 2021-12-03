@@ -1,0 +1,38 @@
+22:20:10 **** Incremental Build of configuration Debug for project Distance_Calculation_Using_UltraSonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+d:/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:23: warning: implicit declaration of function 'Ultrasonic_trigger'
+Finished building: ../main.c
+ 
+Building target: Distance_Calculation_Using_UltraSonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Distance_Calculation_Using_UltraSonic.map -mmcu=atmega16 -o "Distance_Calculation_Using_UltraSonic.elf"  ./gpio.o ./icu.o ./lcd.o ./main.o ./ultrasonic.o   
+Finished building target: Distance_Calculation_Using_UltraSonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Distance_Calculation_Using_UltraSonic.elf  >"Distance_Calculation_Using_UltraSonic.lss"
+Finished building: Distance_Calculation_Using_UltraSonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Distance_Calculation_Using_UltraSonic.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9440 bytes (57.6% Full)
+(.text + .data + .bootloader)
+
+Data:        286 bytes (27.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:20:11 Build Finished (took 730ms)
+

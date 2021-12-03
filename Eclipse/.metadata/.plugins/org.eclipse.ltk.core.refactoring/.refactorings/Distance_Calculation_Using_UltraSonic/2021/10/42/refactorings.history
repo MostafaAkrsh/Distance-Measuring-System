@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Distance_Calculation_Using_UltraSonic/ultrasonic.cpp&apos; to &apos;ultrasonic.c&apos;" description="Rename resource &apos;ultrasonic.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ultrasonic.cpp" name="ultrasonic.c" stamp="1634063519619" updateReferences="true"/>
+</session>
